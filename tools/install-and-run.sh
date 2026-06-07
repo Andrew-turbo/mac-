@@ -10,8 +10,12 @@ if [[ "$(uname -s)" != "Darwin" ]]; then
 fi
 
 if ! command -v git >/dev/null 2>&1 || ! command -v swift >/dev/null 2>&1; then
-  echo "Apple command line tools are required. Run this first, then rerun the install command:"
-  echo "  xcode-select --install"
+  if command -v xcode-select >/dev/null 2>&1; then
+    xcode-select --install 2>/dev/null || true
+  fi
+
+  echo "Apple command line tools are required."
+  echo "Finish the installer that just opened, then rerun the same one-line command."
   exit 1
 fi
 
