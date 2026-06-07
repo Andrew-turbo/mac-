@@ -49,6 +49,25 @@
 
 这版适合通过 GitHub + 命令行分发。对方不需要安装完整 Xcode，也不需要你打包签名；只要是 macOS 14 或更新系统，并安装 Apple 命令行工具即可。
 
+### 上传到 GitHub
+
+在 GitHub 新建一个空仓库，建议仓库名使用：
+
+```text
+mac-slim-manager
+```
+
+不要勾选自动生成 README、`.gitignore` 或 License。创建后，在本项目目录执行：
+
+```bash
+git remote add origin https://github.com/你的GitHub账号/mac-slim-manager.git
+git push -u origin main
+```
+
+上传完成后，把仓库地址发给其他 Mac 用户即可。
+
+### 其他 Mac 运行
+
 第一次使用先安装命令行工具：
 
 ```bash
