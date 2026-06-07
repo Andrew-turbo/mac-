@@ -60,31 +60,35 @@ mac-slim-manager
 不要勾选自动生成 README、`.gitignore` 或 License。创建后，在本项目目录执行：
 
 ```bash
-git remote add origin https://github.com/你的GitHub账号/mac-slim-manager.git
+git remote add origin https://github.com/guohuabao/mac-slim-manager.git
 git push -u origin main
 ```
 
-上传完成后，把仓库地址发给其他 Mac 用户即可。
+如果你的 GitHub 账号不是 `guohuabao`，把上面地址以及 `tools/install-and-run.sh` 里的 `guohuabao` 改成你的真实账号即可。上传完成后，把下面的一行命令发给其他 Mac 用户。
 
 ### 其他 Mac 运行
 
-第一次使用先安装命令行工具：
+最便捷方式是直接复制这一行：
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/guohuabao/mac-slim-manager/main/tools/install-and-run.sh)"
+```
+
+这条命令会自动下载项目到 `~/.mac-slim-manager`，以后再次执行会先更新再启动。
+
+如果对方电脑还没有 Apple 命令行工具，脚本会提示先运行：
 
 ```bash
 xcode-select --install
 ```
 
-然后下载并运行项目：
+安装完命令行工具后，再重新执行上面那条一行命令。
+
+如果不想使用一行安装脚本，也可以手动运行：
 
 ```bash
-git clone https://github.com/你的GitHub账号/mac-slim-manager.git
+git clone https://github.com/guohuabao/mac-slim-manager.git
 cd mac-slim-manager
-./tools/run.sh
-```
-
-如果不想使用脚本，也可以直接运行：
-
-```bash
 swift run MacSlimManager
 ```
 
