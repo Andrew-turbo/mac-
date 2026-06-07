@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="${MAC_SLIM_MANAGER_REPO_URL:-https://github.com/guohuabao/mac-slim-manager.git}"
+REPO_URL="${MAC_SLIM_MANAGER_REPO_URL:-https://github.com/Andrew-turbo/mac-.git}"
 INSTALL_DIR="${MAC_SLIM_MANAGER_DIR:-$HOME/.mac-slim-manager}"
 
 if [[ "$(uname -s)" != "Darwin" ]]; then
